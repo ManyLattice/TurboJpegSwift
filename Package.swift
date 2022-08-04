@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "TurboJpegSwift",
-    platforms: [.macOS(.v11)],
+    platforms: [.macOS(.v10_15)],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
 
@@ -28,9 +28,6 @@ let package = Package(
             dependencies: []),
         .target(
             name: "TurboJpegSwift",
-            dependencies: ["TurboJpegC"]),
-        .testTarget(
-            name: "TurboJpegSwiftTests",
-            dependencies: ["TurboJpegSwift"]),
+            dependencies: ["TurboJpegC"])
     ]
 )
